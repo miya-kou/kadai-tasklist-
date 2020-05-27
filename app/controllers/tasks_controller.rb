@@ -5,7 +5,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    set_message
+    set_task
   end
 
   def new
@@ -25,7 +25,7 @@ class TasksController < ApplicationController
   end
 
   def edit
-    set_message
+    set_task
   end
 
   def update
@@ -41,7 +41,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    set_message
+    set_task
     @task.destroy
 
     flash[:success] = 'タスクが削除されました'
